@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EEzyLife Demo</string>
+    <string name="accept">Accept</string>
+    <string name="accepted">Accepted</string>
+    <string name="decline">Decline</string>
+    <string name="declined">Declined</string>
+</resources>

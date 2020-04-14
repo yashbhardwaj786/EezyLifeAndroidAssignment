@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7AE4EB</color>
+    <color name="colorPrimaryDark">#08CFDA</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="hours_bg_checked">#1A89CACF</color>
+    <color name="hours_bg_pressed">#EFEFEF</color>
+    <color name="divider">#666666</color>
+    <color name="invalidate_day">#666666</color>
+    <color name="selected_color">#08CFDA</color>
+    <color name="unselected_color">#C9E9ED</color>
+    <color name="grey_92">#929292</color>
+</resources>
