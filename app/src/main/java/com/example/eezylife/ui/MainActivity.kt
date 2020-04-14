@@ -52,16 +52,26 @@ class MainActivity : BaseActivity(), KodeinAware {
         }
 
         mainViewModel.buttonClicked.observe(this, androidx.lifecycle.Observer {
-            if (it == "Accepted") {
+            if (it == "bar-Accepted") {
                 accept.visibility = View.GONE
                 accepted.visibility = View.VISIBLE
                 decline.visibility = View.GONE
                 declined.visibility = View.GONE
-            } else if (it == "Declined") {
+            } else if (it == "bar-Declined") {
                 accept.visibility = View.GONE
                 accepted.visibility = View.GONE
                 decline.visibility = View.GONE
                 declined.visibility = View.VISIBLE
+            } else if (it == "rest-Accepted") {
+                accept_bottom.visibility = View.GONE
+                accepted_bottom.visibility = View.VISIBLE
+                decline_bottom.visibility = View.GONE
+                declined_bottom.visibility = View.GONE
+            } else if (it == "rest-Declined") {
+                accept_bottom.visibility = View.GONE
+                accepted_bottom.visibility = View.GONE
+                decline_bottom.visibility = View.GONE
+                declined_bottom.visibility = View.VISIBLE
             }
         })
     }

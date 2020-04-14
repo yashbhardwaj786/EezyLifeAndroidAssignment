@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu-rHU/values-hu-rHU.xml",
+            "map": [
+                {
+                    "source": "/Users/zolo13/.gradle/caches/transforms-2/files-2.1/1e8f6e8d83232cc3fb6eeb04297a91d7/jetified-android.joda-2.9.9/res/values-hu-rHU/values-hu-rHU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -20,13 +20,25 @@ class MainViewModel : ViewModel() {
     val barTime = ObservableField<String>("6:00 PM")
     val barItem = ObservableField<String>("Cocktail")
     val barAddress = ObservableField<String>("20 Queensberry \nSWT 2DR")
+
+
+    val restaurantName = ObservableField<String>("Thai Square")
+    val restaurantTime = ObservableField<String>("8:00 PM")
+    val restaurantItem = ObservableField<String>("Thai")
+    val restaurantAddress = ObservableField<String>("113 Perry Street \nEC1R 3BX")
     var buttonClicked = MutableLiveData<String>()
 
-    fun acceptedClick(){
-        buttonClicked.postValue("Accepted")
+    fun acceptedClick(type: String) {
+        if (type == "bar")
+            buttonClicked.postValue("bar-Accepted")
+        else if (type == "rest")
+            buttonClicked.postValue("rest-Accepted")
     }
 
-    fun declinedClick() {
-        buttonClicked.postValue("Declined")
+    fun declinedClick(type: String) {
+        if (type == "bar")
+            buttonClicked.postValue("bar-Declined")
+        else if (type == "rest")
+            buttonClicked.postValue("rest-Declined")
     }
 }

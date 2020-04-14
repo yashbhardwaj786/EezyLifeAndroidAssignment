@@ -355,15 +355,15 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/selected_bottom_bg"
                         android:orientation="vertical"
                         android:padding="16dp">
 
-
                         <com.mreram.ticketview.TicketView
+                            android:id="@+id/topTicket"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/white"
@@ -372,7 +372,7 @@
                             app:tv_circleRadius="10dp"
                             app:tv_circleSpace="10dp"
                             app:tv_dashColor="@color/black"
-                            app:tv_dashSize="2dp">
+                            app:tv_dashSize="1dp">
 
                             <LinearLayout
                                 android:id="@+id/cl_head"
@@ -562,7 +562,7 @@
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_green_filled"
                                         android:gravity="center"
-                                        android:onClick="@{()-> viewModel.acceptedClick()}"
+                                        android:onClick="@{()-> viewModel.acceptedClick(`bar`)}"
                                         android:orientation="vertical">
 
                                         <androidx.appcompat.widget.AppCompatTextView
@@ -583,7 +583,7 @@
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_grey_filled"
                                         android:gravity="center"
-                                        android:onClick="@{()-> viewModel.declinedClick()}"
+                                        android:onClick="@{()-> viewModel.declinedClick(`bar`)}"
                                         android:orientation="vertical">
 
                                         <androidx.appcompat.widget.AppCompatTextView
@@ -650,8 +650,214 @@
 
                         </com.mreram.ticketview.TicketView>
 
+                        <com.mreram.ticketview.TicketView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            app:tv_anchor1="@+id/cl_head1"
+                            app:tv_anchor2="@+id/cl_center1"
+                            app:tv_circleRadius="10dp"
+                            app:tv_circleSpace="10dp"
+                            android:layout_below="@+id/topTicket"
+                            app:tv_dashColor="@color/black"
+                            app:tv_dashSize="2dp">
 
-                    </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/cl_head1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="@{viewModel.restaurantName}"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp"
+                                        tools:text="Thai Square" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="150dp"
+                                        android:layout_height="180dp"
+                                        android:layout_margin="5dp"
+                                        android:elevation="10dp"
+                                        app:cardCornerRadius="5dp">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:scaleType="fitXY"
+                                            app:srcCompat="@drawable/restaurant" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:gravity="end"
+                                        android:text="@{viewModel.restaurantTime}"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp"
+                                        tools:text="8:00 PM" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="5dp"
+                                        android:drawableStart="@drawable/ic_cocktail"
+                                        android:drawablePadding="16dp"
+                                        android:fontFamily="@font/roboto_light"
+                                        android:text="@{viewModel.restaurantItem}"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        tools:text="Thai" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:drawableStart="@drawable/ic_location"
+                                        android:drawablePadding="16dp"
+                                        android:fontFamily="@font/roboto_light"
+                                        android:text="@{viewModel.restaurantAddress}"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        tools:text="113 Perry Street \nEC 3BX" />
+
+                                    <LinearLayout
+                                        android:id="@+id/accept_bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:layout_margin="5dp"
+                                        android:background="@drawable/bg_round_green_filled"
+                                        android:gravity="center"
+                                        android:onClick="@{()-> viewModel.acceptedClick(`rest`)}"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="@string/accept"
+                                            android:textColor="@color/white"
+                                            android:textSize="15sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/decline_bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:layout_margin="5dp"
+                                        android:background="@drawable/bg_round_grey_filled"
+                                        android:gravity="center"
+                                        android:onClick="@{()-> viewModel.declinedClick(`rest`)}"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="@string/decline"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/accepted_bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/bg_round_green_accepted"
+                                        android:gravity="center"
+                                        android:visibility="gone"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="@string/accepted"
+                                            android:drawablePadding="10dp"
+                                            android:drawableStart="@drawable/ic_checkmark_blue"
+                                            android:textColor="@color/green_57"
+                                            android:textSize="15sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/declined_bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/bg_round_grey_decline"
+                                        android:gravity="center"
+                                        android:visibility="gone"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="@string/declined"
+                                            android:textColor="@color/red"
+                                            android:drawableStart="@drawable/ic_close_black_24dp"
+                                            android:drawablePadding="10dp"
+                                            android:textSize="15sp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/cl_center1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cl_head1"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+
+                        </com.mreram.ticketview.TicketView>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
