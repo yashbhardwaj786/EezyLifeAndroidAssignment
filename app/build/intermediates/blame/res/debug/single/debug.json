@@ -8,6 +8,10 @@
         "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/drawable/ic_monkee.xml"
     },
     {
+        "merged": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/res/merged/debug/layout_layout_morning_slot.xml.flat",
+        "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/layout/layout_morning_slot.xml"
+    },
+    {
         "merged": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/res/merged/debug/drawable_ic_restaurant.xml.flat",
         "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/drawable/ic_restaurant.xml"
     },
@@ -38,6 +42,10 @@
     {
         "merged": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/res/merged/debug/drawable_bg_round_green_filled.xml.flat",
         "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/drawable/bg_round_green_filled.xml"
+    },
+    {
+        "merged": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/res/merged/debug/layout_layout_night_slot.xml.flat",
+        "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/layout/layout_night_slot.xml"
     },
     {
         "merged": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/res/merged/debug/layout_app_bar_home.xml.flat",

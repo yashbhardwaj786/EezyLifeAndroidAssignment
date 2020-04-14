@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
                                                        
+                                                        
                                                    
 
     
+
+                                           
 
                  
                             
@@ -18,7 +21,7 @@
         android:background="@color/shimmer"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
-        tools:context=".ui.MainActivity" android:tag="layout/activity_main_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+        tools:context=".ui.MainActivity" android:tag="layout/activity_main_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
         <include
             layout="@layout/app_bar_home"
@@ -40,7 +43,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical" android:tag="binding_1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -77,7 +80,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
                             android:gravity="center"
-                            android:tag="binding_1"                 
+                            android:tag="binding_2"                 
                             android:textColor="#000000"
                             android:textSize="16sp"
                             tools:text="Mon 13, Apr 2020" />
@@ -92,7 +95,7 @@
                             android:paddingTop="10dp"
                             android:paddingEnd="20dp"
                             android:paddingBottom="10dp"
-                            android:tag="binding_2"             
+                            android:tag="binding_3"             
                             android:textColor="#000000"
                             android:textSize="16sp"
                             tools:text="London, UK" />
@@ -110,7 +113,8 @@
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:tag="binding_4"                                                       >
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -118,7 +122,7 @@
                         android:layout_weight="0.4"
                         android:fontFamily="@font/roboto_medium"
                         android:gravity="center"
-                        android:tag="binding_3"            
+                        android:tag="binding_5"            
                         android:textColor="@color/grey_92"
                         android:textSize="14sp"
                         tools:text="Morning" />
@@ -136,7 +140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/roboto_light"
-                        android:tag="binding_4"                
+                        android:tag="binding_6"                
                         android:textColor="#000000"
                         android:textSize="12sp"
                         tools:text="15°C" />
@@ -146,9 +150,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:tag="binding_7"                                                  
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
+
+                <include
+                    layout="@layout/layout_morning_slot"
+                                                                                                  
+                                                 
+                                                        
+                                                            />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -158,6 +170,7 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
+                    android:tag="binding_8"                                                    
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -167,7 +180,7 @@
                         android:layout_weight="0.4"
                         android:fontFamily="@font/roboto_medium"
                         android:gravity="center"
-                        android:tag="binding_5"         
+                        android:tag="binding_9"         
                         android:textColor="@color/grey_92"
                         android:textSize="14sp"
                         tools:text="Noon" />
@@ -185,7 +198,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/roboto_light"
-                        android:tag="binding_6"             
+                        android:tag="binding_10"            
                         android:textColor="#000000"
                         android:textSize="12sp"
                         tools:text="25°C" />
@@ -195,9 +208,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:tag="binding_11"                                              
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
+
+                <include
+                    layout="@layout/layout_morning_slot"
+                                                                                               
+                                                 
+                                                     
+                                                         />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -207,6 +228,7 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
+                    android:tag="binding_12"                                                        
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -216,7 +238,7 @@
                         android:layout_weight="0.4"
                         android:fontFamily="@font/roboto_medium"
                         android:gravity="center"
-                        android:tag="binding_7"              
+                        android:tag="binding_13"             
                         android:textColor="@color/grey_92"
                         android:textSize="14sp"
                         tools:text="Afternoon" />
@@ -234,7 +256,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/roboto_light"
-                        android:tag="binding_8"                  
+                        android:tag="binding_14"                 
                         android:textColor="#000000"
                         android:textSize="12sp"
                         tools:text="20°C" />
@@ -244,9 +266,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:tag="binding_15"                                                   
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
+
+                <include
+                    layout="@layout/layout_morning_slot"
+                                                                                                    
+                                                 
+                                                          
+                                                              />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -254,12 +284,11 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="16dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="16dp"
-                    android:visibility="gone">
+                    android:tag="binding_16"                                                      >
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -267,7 +296,7 @@
                         android:layout_weight="0.4"
                         android:fontFamily="@font/roboto_medium"
                         android:gravity="center"
-                        android:tag="binding_9"            
+                        android:tag="binding_17"           
                         android:textColor="@color/grey_92"
                         android:textSize="14sp"
                         tools:text="Evening" />
@@ -285,7 +314,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/roboto_light"
-                        android:tag="binding_10"               
+                        android:tag="binding_18"               
                         android:textColor="#000000"
                         android:textSize="12sp"
                         tools:text="16°C" />
@@ -295,6 +324,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:tag="binding_19"                                
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
@@ -307,6 +337,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center_vertical"
+                    android:tag="binding_20"                                                      
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -323,7 +354,7 @@
                             android:layout_weight="0.4"
                             android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
-                            android:tag="binding_11"           
+                            android:tag="binding_21"           
                             android:textColor="@color/white"
                             android:textSize="14sp"
                             tools:text="Evening" />
@@ -341,7 +372,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_light"
-                            android:tag="binding_12"               
+                            android:tag="binding_22"               
                             android:textColor="@color/white"
                             android:textSize="12sp"
                             tools:text="16°C" />
@@ -351,6 +382,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
+                            android:tag="binding_23"                                 
                             app:srcCompat="@drawable/ic_minus" />
 
                     </LinearLayout>
@@ -398,7 +430,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/roboto_medium"
-                                    android:tag="binding_13"            
+                                    android:tag="binding_24"            
                                     android:textColor="#000000"
                                     android:textSize="12sp"
                                     tools:text="Nicolas is the host:" />
@@ -488,7 +520,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         android:fontFamily="@font/roboto_medium"
-                                        android:tag="binding_14"           
+                                        android:tag="binding_25"           
                                         android:textColor="@color/black"
                                         android:textSize="16sp"
                                         tools:text="Piano Works" />
@@ -522,7 +554,7 @@
                                         android:layout_margin="10dp"
                                         android:fontFamily="@font/roboto_medium"
                                         android:gravity="end"
-                                        android:tag="binding_15"           
+                                        android:tag="binding_26"           
                                         android:textColor="@color/black"
                                         android:textSize="16sp"
                                         tools:text="6:00 PM" />
@@ -535,7 +567,7 @@
                                         android:drawableStart="@drawable/ic_cocktail"
                                         android:drawablePadding="16dp"
                                         android:fontFamily="@font/roboto_light"
-                                        android:tag="binding_16"           
+                                        android:tag="binding_27"           
                                         android:textColor="@color/black"
                                         android:textSize="12sp"
                                         tools:text="Cocktail" />
@@ -550,7 +582,7 @@
                                         android:drawableStart="@drawable/ic_location"
                                         android:drawablePadding="16dp"
                                         android:fontFamily="@font/roboto_light"
-                                        android:tag="binding_17"              
+                                        android:tag="binding_28"              
                                         android:textColor="@color/black"
                                         android:textSize="12sp"
                                         tools:text="20 Queensberry \nSWT 2DR" />
@@ -562,7 +594,7 @@
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_green_filled"
                                         android:gravity="center"
-                                        android:tag="binding_18"                                
+                                        android:tag="binding_29"                                
                                         android:orientation="vertical">
 
                                         <androidx.appcompat.widget.AppCompatTextView
@@ -583,7 +615,7 @@
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_grey_filled"
                                         android:gravity="center"
-                                        android:tag="binding_19"                                
+                                        android:tag="binding_30"                                
                                         android:orientation="vertical">
 
                                         <androidx.appcompat.widget.AppCompatTextView
@@ -686,7 +718,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         android:fontFamily="@font/roboto_medium"
-                                        android:tag="binding_20"                  
+                                        android:tag="binding_31"                  
                                         android:textColor="@color/black"
                                         android:textSize="16sp"
                                         tools:text="Thai Square" />
@@ -720,7 +752,7 @@
                                         android:layout_margin="10dp"
                                         android:fontFamily="@font/roboto_medium"
                                         android:gravity="end"
-                                        android:tag="binding_21"                  
+                                        android:tag="binding_32"                  
                                         android:textColor="@color/black"
                                         android:textSize="16sp"
                                         tools:text="8:00 PM" />
@@ -733,7 +765,7 @@
                                         android:drawableStart="@drawable/ic_cocktail"
                                         android:drawablePadding="16dp"
                                         android:fontFamily="@font/roboto_light"
-                                        android:tag="binding_22"                  
+                                        android:tag="binding_33"                  
                                         android:textColor="@color/black"
                                         android:textSize="12sp"
                                         tools:text="Thai" />
@@ -748,7 +780,7 @@
                                         android:drawableStart="@drawable/ic_location"
                                         android:drawablePadding="16dp"
                                         android:fontFamily="@font/roboto_light"
-                                        android:tag="binding_23"                     
+                                        android:tag="binding_34"                     
                                         android:textColor="@color/black"
                                         android:textSize="12sp"
                                         tools:text="113 Perry Street \nEC 3BX" />
@@ -760,7 +792,7 @@
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_green_filled"
                                         android:gravity="center"
-                                        android:tag="binding_24"                                 
+                                        android:tag="binding_35"                                 
                                         android:orientation="vertical">
 
                                         <androidx.appcompat.widget.AppCompatTextView
@@ -781,7 +813,7 @@
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_grey_filled"
                                         android:gravity="center"
-                                        android:tag="binding_25"                                 
+                                        android:tag="binding_36"                                 
                                         android:orientation="vertical">
 
                                         <androidx.appcompat.widget.AppCompatTextView
@@ -882,7 +914,7 @@
                                             android:layout_alignParentStart="true"
                                             android:layout_gravity="center"
                                             android:fontFamily="@font/roboto_medium"
-                                            android:tag="binding_26"                 
+                                            android:tag="binding_37"                 
                                             android:textColor="@color/black"
                                             android:textSize="15sp"
                                             tools:text="Monkee" />
@@ -893,7 +925,7 @@
                                             android:layout_alignParentEnd="true"
                                             android:layout_gravity="center"
                                             android:fontFamily="@font/roboto_light"
-                                            android:tag="binding_27"               
+                                            android:tag="binding_38"               
                                             android:textColor="@color/black"
                                             android:textSize="12sp"
                                             tools:text="5 Mins" />
@@ -905,7 +937,7 @@
                                             android:layout_alignParentStart="true"
                                             android:layout_gravity="center"
                                             android:fontFamily="@font/roboto_light"
-                                            android:tag="binding_28"           
+                                            android:tag="binding_39"           
                                             android:textColor="@color/black"
                                             android:textSize="12sp"
                                             tools:text="test comments" />
@@ -928,7 +960,7 @@
                                     android:drawableStart="@drawable/ic_comments"
                                     android:drawablePadding="10dp"
                                     android:fontFamily="@font/roboto_light"
-                                    android:tag="binding_29"                
+                                    android:tag="binding_40"                
                                     android:textColor="@color/black"
                                     android:textSize="12sp"
                                     tools:text="6 Comments" />
@@ -936,8 +968,8 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
                                     android:layout_gravity="center_vertical"
+                                    android:layout_margin="10dp"
                                     android:orientation="horizontal">
 
                                     <de.hdodenhof.circleimageview.CircleImageView
@@ -951,13 +983,13 @@
                                     <androidx.appcompat.widget.AppCompatEditText
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_weight="1"
                                         android:layout_margin="10dp"
+                                        android:layout_weight="1"
                                         android:background="@drawable/bg_rounded_left_top_white"
                                         android:hint="Write your thoughts"
+                                        android:padding="10dp"
                                         android:textColor="@color/black"
-                                        android:textSize="14sp"
-                                        android:padding="10dp" />
+                                        android:textSize="14sp" />
 
                                 </LinearLayout>
 
@@ -968,6 +1000,65 @@
                     </RelativeLayout>
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_rounded_left_top_white"
+                    android:gravity="center_vertical"
+                    android:tag="binding_41"                                                    
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:tag="binding_42"         
+                        android:textColor="@color/grey_92"
+                        android:textSize="14sp"
+                        tools:text="Night" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="0.2"
+                        app:srcCompat="@drawable/ic_rain_grey" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_light"
+                        android:tag="binding_43"             
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        tools:text="25°C" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:tag="binding_44"                                               
+                        app:srcCompat="@drawable/ic_add" />
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/layout_night_slot"
+                                                                                                
+                                                 
+                                                      
+                                                          />
 
             </LinearLayout>
 

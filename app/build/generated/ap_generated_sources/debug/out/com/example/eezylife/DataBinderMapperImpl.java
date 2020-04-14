@@ -7,6 +7,8 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.example.eezylife.databinding.ActivityMainBindingImpl;
+import com.example.eezylife.databinding.LayoutMorningSlotBindingImpl;
+import com.example.eezylife.databinding.LayoutNightSlotBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -20,10 +22,16 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYMAIN = 1;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(1);
+  private static final int LAYOUT_LAYOUTMORNINGSLOT = 2;
+
+  private static final int LAYOUT_LAYOUTNIGHTSLOT = 3;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.eezylife.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.eezylife.R.layout.layout_morning_slot, LAYOUT_LAYOUTMORNINGSLOT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.eezylife.R.layout.layout_night_slot, LAYOUT_LAYOUTNIGHTSLOT);
   }
 
   @Override
@@ -40,6 +48,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityMainBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LAYOUTMORNINGSLOT: {
+          if ("layout/layout_morning_slot_0".equals(tag)) {
+            return new LayoutMorningSlotBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for layout_morning_slot is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LAYOUTNIGHTSLOT: {
+          if ("layout/layout_night_slot_0".equals(tag)) {
+            return new LayoutNightSlotBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for layout_night_slot is invalid. Received: " + tag);
         }
       }
     }
@@ -86,19 +106,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(2);
+    static final SparseArray<String> sKeys = new SparseArray<String>(4);
 
     static {
       sKeys.put(0, "_all");
-      sKeys.put(1, "viewModel");
+      sKeys.put(1, "slotName");
+      sKeys.put(2, "slotTemp");
+      sKeys.put(3, "viewModel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(1);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
 
     static {
       sKeys.put("layout/activity_main_0", com.example.eezylife.R.layout.activity_main);
+      sKeys.put("layout/layout_morning_slot_0", com.example.eezylife.R.layout.layout_morning_slot);
+      sKeys.put("layout/layout_night_slot_0", com.example.eezylife.R.layout.layout_night_slot);
     }
   }
 }

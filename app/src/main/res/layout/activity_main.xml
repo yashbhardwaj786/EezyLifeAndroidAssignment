@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <import type="android.view.View" />
 
         <variable
             name="viewModel"
@@ -110,7 +113,8 @@
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:visibility="@{viewModel.morningSlotVisible ? View.GONE: View.VISIBLE}">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -146,9 +150,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:onClick="@{()->viewModel.morningSlotExpended(viewModel.morning)}"
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
+
+                <include
+                    layout="@layout/layout_morning_slot"
+                    android:visibility="@{viewModel.morningSlotVisible ? View.VISIBLE: View.GONE}"
+                    bind:viewModel="@{viewModel}"
+                    bind:slotName="@{viewModel.morning}"
+                    bind:slotTemp="@{viewModel.morningTemp}"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -158,6 +170,7 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
+                    android:visibility="@{viewModel.noonSlotVisible ? View.GONE: View.VISIBLE}"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -195,9 +208,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:onClick="@{()->viewModel.morningSlotExpended(viewModel.noon)}"
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
+
+                <include
+                    layout="@layout/layout_morning_slot"
+                    android:visibility="@{viewModel.noonSlotVisible ? View.VISIBLE: View.GONE}"
+                    bind:viewModel="@{viewModel}"
+                    bind:slotName="@{viewModel.noon}"
+                    bind:slotTemp="@{viewModel.noonTemp}"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -207,6 +228,7 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
+                    android:visibility="@{viewModel.afterNoonSlotVisible ? View.GONE: View.VISIBLE}"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -244,9 +266,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:onClick="@{()->viewModel.morningSlotExpended(viewModel.afterNoon)}"
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
+
+                <include
+                    layout="@layout/layout_morning_slot"
+                    android:visibility="@{viewModel.afterNoonSlotVisible ? View.VISIBLE: View.GONE}"
+                    bind:viewModel="@{viewModel}"
+                    bind:slotName="@{viewModel.afterNoon}"
+                    bind:slotTemp="@{viewModel.afterNoonTemp}"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -254,12 +284,11 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="16dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="16dp"
-                    android:visibility="gone">
+                    android:visibility="@{viewModel.eveningSlotVisible ? View.GONE: View.VISIBLE}">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -295,6 +324,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
+                        android:onClick="@{()->viewModel.eveningSlotExpended()}"
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
@@ -307,6 +337,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center_vertical"
+                    android:visibility="@{viewModel.eveningSlotVisible ? View.VISIBLE: View.GONE}"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -351,6 +382,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
+                            android:onClick="@{()->viewModel.eveningSlotCollapsed()}"
                             app:srcCompat="@drawable/ic_minus" />
 
                     </LinearLayout>
@@ -936,8 +968,8 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
                                     android:layout_gravity="center_vertical"
+                                    android:layout_margin="10dp"
                                     android:orientation="horizontal">
 
                                     <de.hdodenhof.circleimageview.CircleImageView
@@ -951,13 +983,13 @@
                                     <androidx.appcompat.widget.AppCompatEditText
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_weight="1"
                                         android:layout_margin="10dp"
+                                        android:layout_weight="1"
                                         android:background="@drawable/bg_rounded_left_top_white"
                                         android:hint="Write your thoughts"
+                                        android:padding="10dp"
                                         android:textColor="@color/black"
-                                        android:textSize="14sp"
-                                        android:padding="10dp" />
+                                        android:textSize="14sp" />
 
                                 </LinearLayout>
 
@@ -968,6 +1000,65 @@
                     </RelativeLayout>
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_rounded_left_top_white"
+                    android:gravity="center_vertical"
+                    android:visibility="@{viewModel.nightSlotVisible ? View.GONE: View.VISIBLE}"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@{viewModel.night}"
+                        android:textColor="@color/grey_92"
+                        android:textSize="14sp"
+                        tools:text="Night" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="0.2"
+                        app:srcCompat="@drawable/ic_rain_grey" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="@{viewModel.nightTemp}"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        tools:text="25°C" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:onClick="@{()->viewModel.morningSlotExpended(viewModel.night)}"
+                        app:srcCompat="@drawable/ic_add" />
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/layout_night_slot"
+                    android:visibility="@{viewModel.nightSlotVisible ? View.VISIBLE: View.GONE}"
+                    bind:viewModel="@{viewModel}"
+                    bind:slotName="@{viewModel.night}"
+                    bind:slotTemp="@{viewModel.nightTemp}"/>
 
             </LinearLayout>
 
