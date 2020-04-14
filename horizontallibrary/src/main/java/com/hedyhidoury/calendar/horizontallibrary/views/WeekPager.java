@@ -84,11 +84,25 @@ public class WeekPager extends ViewPager {
             @Override
             public void onPageSelected(int position) {
                 if (!check)
-                    if (position < pos)
-                        adapter.swipePreviousToPosition(isFromMonthSwipeGesture,position);
-                    else if (position > pos)
-                        adapter.swipeForwardToPosition(isFromMonthSwipeGesture,position);
-                currentDate = adapter.getCurrentDate();
+                    if (position < pos) {
+                        if(selectedDateTime == null)
+                            selectedDateTime = currentDate;
+                        else
+                            selectedDateTime = selectedDateTime.minusDays(7);
+
+                        adapter.swipePreviousToPosition(isFromMonthSwipeGesture, position);
+                    }
+                    else if (position > pos) {
+                        if(selectedDateTime == null)
+                            selectedDateTime = currentDate;
+                        else
+                            selectedDateTime = selectedDateTime.plusDays(7);
+                        adapter.swipeForwardToPosition(isFromMonthSwipeGesture, position);
+                    } else {
+                        currentDate = adapter.getCurrentDate();
+                    }
+                BusProvider.getInstance().post(new Event.OnDateClickEvent(selectedDateTime));
+                BusProvider.getInstance().post(new Event.InvalidateEvent());
                 isFromMonthSwipeGesture = false;
                 pos = position;
                 check = false;
