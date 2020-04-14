@@ -324,7 +324,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:onClick="@{()->viewModel.eveningSlotExpended()}"
+                        android:onClick="@{()->viewModel.morningSlotExpended(viewModel.evening)}"
                         app:srcCompat="@drawable/ic_add" />
 
                 </LinearLayout>
@@ -382,7 +382,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
-                            android:onClick="@{()->viewModel.eveningSlotCollapsed()}"
+                            android:onClick="@{()->viewModel.morningSlotCollapsed(viewModel.evening)}"
                             app:srcCompat="@drawable/ic_minus" />
 
                     </LinearLayout>
@@ -912,7 +912,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_alignParentStart="true"
-                                            android:layout_gravity="center"
+                                            android:layout_gravity="center_vertical"
                                             android:fontFamily="@font/roboto_medium"
                                             android:text="@{viewModel.commentAuthor}"
                                             android:textColor="@color/black"
@@ -923,7 +923,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_alignParentEnd="true"
-                                            android:layout_gravity="center"
+                                            android:layout_gravity="center_vertical"
                                             android:fontFamily="@font/roboto_light"
                                             android:text="@{viewModel.commentTime}"
                                             android:textColor="@color/black"

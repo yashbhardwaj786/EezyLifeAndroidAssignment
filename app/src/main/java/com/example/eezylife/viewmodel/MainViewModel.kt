@@ -54,34 +54,42 @@ class MainViewModel : ViewModel() {
     }
 
     fun morningSlotExpended(slot: String) {
-        if (slot == "Morning") {
-            morningSlotVisible.set(true)
-        } else if (slot == "Noon") {
-            noonSlotVisible.set(true)
-        } else if (slot == "Afternoon") {
-            afterNoonSlotVisible.set(true)
-        } else if (slot == "Night") {
-            nightSlotVisible.set(true)
+        when (slot) {
+            "Morning" -> {
+                morningSlotVisible.set(true)
+            }
+            "Noon" -> {
+                noonSlotVisible.set(true)
+            }
+            "Afternoon" -> {
+                afterNoonSlotVisible.set(true)
+            }
+            "Night" -> {
+                nightSlotVisible.set(true)
+            }
+            "Evening" -> {
+                eveningSlotVisible.set(true)
+            }
         }
     }
 
     fun morningSlotCollapsed(slot: String) {
-        if (slot == "Morning") {
-            morningSlotVisible.set(false)
-        } else if (slot == "Noon") {
-            noonSlotVisible.set(false)
-        } else if (slot == "Afternoon") {
-            afterNoonSlotVisible.set(false)
-        } else if (slot == "Night") {
-            nightSlotVisible.set(false)
+        when (slot) {
+            "Morning" -> {
+                morningSlotVisible.set(false)
+            }
+            "Noon" -> {
+                noonSlotVisible.set(false)
+            }
+            "Afternoon" -> {
+                afterNoonSlotVisible.set(false)
+            }
+            "Night" -> {
+                nightSlotVisible.set(false)
+            }
+            "Evening" -> {
+                eveningSlotVisible.set(false)
+            }
         }
-    }
-
-    fun eveningSlotExpended() {
-        eveningSlotVisible.set(true)
-    }
-
-    fun eveningSlotCollapsed() {
-        eveningSlotVisible.set(false)
     }
 }
