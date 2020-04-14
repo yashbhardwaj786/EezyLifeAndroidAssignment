@@ -124,7 +124,7 @@
                         android:gravity="center"
                         android:text="@{viewModel.morning}"
                         android:textColor="@color/grey_92"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         tools:text="Morning" />
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -182,7 +182,7 @@
                         android:gravity="center"
                         android:text="@{viewModel.noon}"
                         android:textColor="@color/grey_92"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         tools:text="Noon" />
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -240,7 +240,7 @@
                         android:gravity="center"
                         android:text="@{viewModel.afterNoon}"
                         android:textColor="@color/grey_92"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         tools:text="Afternoon" />
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -298,7 +298,7 @@
                         android:gravity="center"
                         android:text="@{viewModel.evening}"
                         android:textColor="@color/grey_92"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         tools:text="Evening" />
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -356,7 +356,7 @@
                             android:gravity="center"
                             android:text="@{viewModel.evening}"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             tools:text="Evening" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -590,7 +590,7 @@
                                     <LinearLayout
                                         android:id="@+id/accept"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_green_filled"
                                         android:gravity="center"
@@ -611,7 +611,7 @@
                                     <LinearLayout
                                         android:id="@+id/decline"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_grey_filled"
                                         android:gravity="center"
@@ -632,7 +632,7 @@
                                     <LinearLayout
                                         android:id="@+id/accepted"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="10dp"
                                         android:background="@drawable/bg_round_green_accepted"
                                         android:gravity="center"
@@ -655,7 +655,7 @@
                                     <LinearLayout
                                         android:id="@+id/declined"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="10dp"
                                         android:background="@drawable/bg_round_grey_decline"
                                         android:gravity="center"
@@ -788,7 +788,7 @@
                                     <LinearLayout
                                         android:id="@+id/accept_bottom"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_green_filled"
                                         android:gravity="center"
@@ -809,7 +809,7 @@
                                     <LinearLayout
                                         android:id="@+id/decline_bottom"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="5dp"
                                         android:background="@drawable/bg_round_grey_filled"
                                         android:gravity="center"
@@ -830,7 +830,7 @@
                                     <LinearLayout
                                         android:id="@+id/accepted_bottom"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="10dp"
                                         android:background="@drawable/bg_round_green_accepted"
                                         android:gravity="center"
@@ -853,7 +853,7 @@
                                     <LinearLayout
                                         android:id="@+id/declined_bottom"
                                         android:layout_width="match_parent"
-                                        android:layout_height="48dp"
+                                        android:layout_height="35dp"
                                         android:layout_margin="10dp"
                                         android:background="@drawable/bg_round_grey_decline"
                                         android:gravity="center"
@@ -1022,7 +1022,7 @@
                         android:gravity="center"
                         android:text="@{viewModel.night}"
                         android:textColor="@color/grey_92"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         tools:text="Night" />
 
                     <androidx.appcompat.widget.AppCompatImageView
