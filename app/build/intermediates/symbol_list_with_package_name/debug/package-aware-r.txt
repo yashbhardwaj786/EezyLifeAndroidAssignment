@@ -1481,6 +1481,7 @@ drawable bg_round_green_accepted
 drawable bg_round_green_filled
 drawable bg_round_grey_decline
 drawable bg_round_grey_filled
+drawable bg_round_three_corner
 drawable bg_rounded_image
 drawable bg_rounded_left_top_white
 drawable btn_checkbox_checked_mtrl
@@ -1650,6 +1651,7 @@ id alertTitle
 id all
 id always
 id async
+id authorName
 id auto
 id barrier
 id beginning
@@ -1892,6 +1894,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id threeLetters
+id ticketViewBottom
 id time
 id title
 id titleDividerNoCustom

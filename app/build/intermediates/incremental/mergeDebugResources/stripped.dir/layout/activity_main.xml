@@ -651,11 +651,13 @@
                         </com.mreram.ticketview.TicketView>
 
                         <com.mreram.ticketview.TicketView
+                            android:id="@+id/ticketViewBottom"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/white"
                             app:tv_anchor1="@+id/cl_head1"
                             app:tv_anchor2="@+id/cl_center1"
+                            android:layout_marginTop="10dp"
                             app:tv_circleRadius="10dp"
                             app:tv_circleSpace="10dp"
                             android:layout_below="@+id/topTicket"
@@ -852,6 +854,84 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
                                 android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/ic_monkee"/>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:padding="10dp"
+                                        android:background="@drawable/bg_round_three_corner"
+                                        android:layout_height="wrap_content">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/authorName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:tag="binding_26"                 
+                                            android:textColor="@color/black"
+                                            tools:text="Monkee"
+                                            android:layout_alignParentStart="true"
+                                            android:textSize="15sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/roboto_light"
+                                            android:tag="binding_27"               
+                                            android:textColor="@color/black"
+                                            tools:text="5 Mins"
+                                            android:layout_alignParentEnd="true"
+                                            android:textSize="12sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_below="@+id/authorName"
+                                            android:fontFamily="@font/roboto_light"
+                                            android:tag="binding_28"           
+                                            android:textColor="@color/black"
+                                            tools:text="test comments"
+                                            android:layout_alignParentStart="true"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        app:srcCompat="@drawable/ic_heart"/>
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/roboto_light"
+                                    android:tag="binding_29"                
+                                    android:textColor="@color/black"
+                                    android:drawableStart="@drawable/ic_comments"
+                                    android:drawablePadding="10dp"
+                                    android:layout_marginTop="10dp"
+                                    tools:text="6 Comments"
+                                    android:textSize="12sp" />
 
                             </LinearLayout>
 

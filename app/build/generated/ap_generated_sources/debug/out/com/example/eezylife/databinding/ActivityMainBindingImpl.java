@@ -14,19 +14,20 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.horizontal, 26);
-        sViewsWithIds.put(R.id.topTicket, 27);
-        sViewsWithIds.put(R.id.cl_head, 28);
-        sViewsWithIds.put(R.id.photo1, 29);
-        sViewsWithIds.put(R.id.photo2, 30);
-        sViewsWithIds.put(R.id.photo3, 31);
-        sViewsWithIds.put(R.id.cl_center, 32);
-        sViewsWithIds.put(R.id.accepted, 33);
-        sViewsWithIds.put(R.id.declined, 34);
-        sViewsWithIds.put(R.id.cl_head1, 35);
-        sViewsWithIds.put(R.id.accepted_bottom, 36);
-        sViewsWithIds.put(R.id.declined_bottom, 37);
-        sViewsWithIds.put(R.id.cl_center1, 38);
+        sViewsWithIds.put(R.id.horizontal, 30);
+        sViewsWithIds.put(R.id.topTicket, 31);
+        sViewsWithIds.put(R.id.cl_head, 32);
+        sViewsWithIds.put(R.id.photo1, 33);
+        sViewsWithIds.put(R.id.photo2, 34);
+        sViewsWithIds.put(R.id.photo3, 35);
+        sViewsWithIds.put(R.id.cl_center, 36);
+        sViewsWithIds.put(R.id.accepted, 37);
+        sViewsWithIds.put(R.id.declined, 38);
+        sViewsWithIds.put(R.id.ticketViewBottom, 39);
+        sViewsWithIds.put(R.id.cl_head1, 40);
+        sViewsWithIds.put(R.id.accepted_bottom, 41);
+        sViewsWithIds.put(R.id.declined_bottom, 42);
+        sViewsWithIds.put(R.id.cl_center1, 43);
     }
     // views
     @NonNull
@@ -58,6 +59,12 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
     @NonNull
     private final androidx.appcompat.widget.AppCompatTextView mboundView23;
     @NonNull
+    private final androidx.appcompat.widget.AppCompatTextView mboundView27;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatTextView mboundView28;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatTextView mboundView29;
+    @NonNull
     private final androidx.appcompat.widget.AppCompatTextView mboundView3;
     @NonNull
     private final androidx.appcompat.widget.AppCompatTextView mboundView4;
@@ -85,31 +92,34 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
     // Inverse Binding Event Handlers
 
     public ActivityMainBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 39, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 44, sIncludes, sViewsWithIds));
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 19
+        super(bindingComponent, root, 23
             , (android.widget.LinearLayout) bindings[18]
             , (android.widget.LinearLayout) bindings[24]
-            , (android.widget.LinearLayout) bindings[33]
+            , (android.widget.LinearLayout) bindings[37]
+            , (android.widget.LinearLayout) bindings[41]
+            , (androidx.appcompat.widget.AppCompatTextView) bindings[26]
             , (android.widget.LinearLayout) bindings[36]
+            , (android.widget.LinearLayout) bindings[43]
             , (android.widget.LinearLayout) bindings[32]
-            , (android.widget.LinearLayout) bindings[38]
-            , (android.widget.LinearLayout) bindings[28]
-            , (android.widget.LinearLayout) bindings[35]
+            , (android.widget.LinearLayout) bindings[40]
             , (android.widget.LinearLayout) bindings[19]
             , (android.widget.LinearLayout) bindings[25]
-            , (android.widget.LinearLayout) bindings[34]
-            , (android.widget.LinearLayout) bindings[37]
-            , (com.hedyhidoury.calendar.horizontallibrary.HorizontalCalendarView) bindings[26]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[29]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[30]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[31]
+            , (android.widget.LinearLayout) bindings[38]
+            , (android.widget.LinearLayout) bindings[42]
+            , (com.hedyhidoury.calendar.horizontallibrary.HorizontalCalendarView) bindings[30]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[33]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[34]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[35]
             , (android.widget.LinearLayout) bindings[0]
-            , (com.mreram.ticketview.TicketView) bindings[27]
+            , (com.mreram.ticketview.TicketView) bindings[39]
+            , (com.mreram.ticketview.TicketView) bindings[31]
             );
         this.accept.setTag(null);
         this.acceptBottom.setTag(null);
+        this.authorName.setTag(null);
         this.decline.setTag(null);
         this.declineBottom.setTag(null);
         this.mboundView1 = (androidx.appcompat.widget.AppCompatTextView) bindings[1];
@@ -140,6 +150,12 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         this.mboundView22.setTag(null);
         this.mboundView23 = (androidx.appcompat.widget.AppCompatTextView) bindings[23];
         this.mboundView23.setTag(null);
+        this.mboundView27 = (androidx.appcompat.widget.AppCompatTextView) bindings[27];
+        this.mboundView27.setTag(null);
+        this.mboundView28 = (androidx.appcompat.widget.AppCompatTextView) bindings[28];
+        this.mboundView28.setTag(null);
+        this.mboundView29 = (androidx.appcompat.widget.AppCompatTextView) bindings[29];
+        this.mboundView29.setTag(null);
         this.mboundView3 = (androidx.appcompat.widget.AppCompatTextView) bindings[3];
         this.mboundView3.setTag(null);
         this.mboundView4 = (androidx.appcompat.widget.AppCompatTextView) bindings[4];
@@ -167,7 +183,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x100000L;
+                mDirtyFlags = 0x1000000L;
         }
         requestRebind();
     }
@@ -197,7 +213,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
     public void setViewModel(@Nullable com.example.eezylife.viewmodel.MainViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x80000L;
+            mDirtyFlags |= 0x800000L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -219,31 +235,39 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
             case 5 :
                 return onChangeViewModelEveningTemp((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 6 :
-                return onChangeViewModelRestaurantAddress((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelComment((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 7 :
-                return onChangeViewModelRestaurantName((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelCommentCount((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 8 :
-                return onChangeViewModelRestaurantTime((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelRestaurantAddress((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 9 :
-                return onChangeViewModelRestaurantItem((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelRestaurantName((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 10 :
-                return onChangeViewModelNoonTemp((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelRestaurantTime((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 11 :
-                return onChangeViewModelHostName((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelRestaurantItem((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 12 :
-                return onChangeViewModelMorning((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelNoonTemp((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 13 :
-                return onChangeViewModelAfterNoonTemp((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelHostName((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 14 :
-                return onChangeViewModelCityName((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelMorning((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 15 :
-                return onChangeViewModelAfterNoon((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelCommentTime((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 16 :
-                return onChangeViewModelEvening((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelAfterNoonTemp((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 17 :
-                return onChangeViewModelBarAddress((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelCityName((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 18 :
+                return onChangeViewModelAfterNoon((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 19 :
+                return onChangeViewModelEvening((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 20 :
+                return onChangeViewModelBarAddress((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 21 :
                 return onChangeViewModelBarTime((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 22 :
+                return onChangeViewModelCommentAuthor((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
         }
         return false;
     }
@@ -301,7 +325,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelRestaurantAddress(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantAddress, int fieldId) {
+    private boolean onChangeViewModelComment(androidx.databinding.ObservableField<java.lang.String> ViewModelComment, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x40L;
@@ -310,7 +334,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelRestaurantName(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantName, int fieldId) {
+    private boolean onChangeViewModelCommentCount(androidx.databinding.ObservableField<java.lang.String> ViewModelCommentCount, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x80L;
@@ -319,7 +343,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelRestaurantTime(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantTime, int fieldId) {
+    private boolean onChangeViewModelRestaurantAddress(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantAddress, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x100L;
@@ -328,7 +352,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelRestaurantItem(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantItem, int fieldId) {
+    private boolean onChangeViewModelRestaurantName(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantName, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x200L;
@@ -337,7 +361,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelNoonTemp(androidx.databinding.ObservableField<java.lang.String> ViewModelNoonTemp, int fieldId) {
+    private boolean onChangeViewModelRestaurantTime(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantTime, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x400L;
@@ -346,7 +370,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelHostName(androidx.databinding.ObservableField<java.lang.String> ViewModelHostName, int fieldId) {
+    private boolean onChangeViewModelRestaurantItem(androidx.databinding.ObservableField<java.lang.String> ViewModelRestaurantItem, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x800L;
@@ -355,7 +379,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelMorning(androidx.databinding.ObservableField<java.lang.String> ViewModelMorning, int fieldId) {
+    private boolean onChangeViewModelNoonTemp(androidx.databinding.ObservableField<java.lang.String> ViewModelNoonTemp, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1000L;
@@ -364,7 +388,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelAfterNoonTemp(androidx.databinding.ObservableField<java.lang.String> ViewModelAfterNoonTemp, int fieldId) {
+    private boolean onChangeViewModelHostName(androidx.databinding.ObservableField<java.lang.String> ViewModelHostName, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2000L;
@@ -373,7 +397,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelCityName(androidx.databinding.ObservableField<java.lang.String> ViewModelCityName, int fieldId) {
+    private boolean onChangeViewModelMorning(androidx.databinding.ObservableField<java.lang.String> ViewModelMorning, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4000L;
@@ -382,7 +406,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelAfterNoon(androidx.databinding.ObservableField<java.lang.String> ViewModelAfterNoon, int fieldId) {
+    private boolean onChangeViewModelCommentTime(androidx.databinding.ObservableField<java.lang.String> ViewModelCommentTime, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x8000L;
@@ -391,7 +415,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelEvening(androidx.databinding.ObservableField<java.lang.String> ViewModelEvening, int fieldId) {
+    private boolean onChangeViewModelAfterNoonTemp(androidx.databinding.ObservableField<java.lang.String> ViewModelAfterNoonTemp, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x10000L;
@@ -400,7 +424,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelBarAddress(androidx.databinding.ObservableField<java.lang.String> ViewModelBarAddress, int fieldId) {
+    private boolean onChangeViewModelCityName(androidx.databinding.ObservableField<java.lang.String> ViewModelCityName, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x20000L;
@@ -409,10 +433,46 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         }
         return false;
     }
-    private boolean onChangeViewModelBarTime(androidx.databinding.ObservableField<java.lang.String> ViewModelBarTime, int fieldId) {
+    private boolean onChangeViewModelAfterNoon(androidx.databinding.ObservableField<java.lang.String> ViewModelAfterNoon, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x40000L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelEvening(androidx.databinding.ObservableField<java.lang.String> ViewModelEvening, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x80000L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelBarAddress(androidx.databinding.ObservableField<java.lang.String> ViewModelBarAddress, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x100000L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelBarTime(androidx.databinding.ObservableField<java.lang.String> ViewModelBarTime, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x200000L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelCommentAuthor(androidx.databinding.ObservableField<java.lang.String> ViewModelCommentAuthor, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x400000L;
             }
             return true;
         }
@@ -426,21 +486,27 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewModelCommentAuthorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelMorningTemp = null;
         java.lang.String viewModelSelectedDateGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelBarName = null;
+        java.lang.String viewModelCommentGet = null;
         java.lang.String viewModelAfterNoonTempGet = null;
         java.lang.String viewModelHostNameGet = null;
+        java.lang.String viewModelCommentTimeGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelBarItem = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelNoon = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelSelectedDate = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelEveningTemp = null;
+        androidx.databinding.ObservableField<java.lang.String> viewModelComment = null;
+        androidx.databinding.ObservableField<java.lang.String> viewModelCommentCount = null;
         java.lang.String viewModelEveningTempGet = null;
         java.lang.String viewModelMorningTempGet = null;
         java.lang.String viewModelAfterNoonGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelRestaurantAddress = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelRestaurantName = null;
         java.lang.String viewModelCityNameGet = null;
+        java.lang.String viewModelCommentCountGet = null;
         java.lang.String viewModelNoonGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelRestaurantTime = null;
         java.lang.String viewModelEveningGet = null;
@@ -454,6 +520,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         java.lang.String viewModelNoonTempGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelMorning = null;
         java.lang.String viewModelRestaurantAddressGet = null;
+        androidx.databinding.ObservableField<java.lang.String> viewModelCommentTime = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelAfterNoonTemp = null;
         java.lang.String viewModelRestaurantItemGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelCityName = null;
@@ -465,11 +532,12 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         androidx.databinding.ObservableField<java.lang.String> viewModelBarAddress = null;
         androidx.databinding.ObservableField<java.lang.String> viewModelBarTime = null;
         java.lang.String viewModelBarItemGet = null;
+        androidx.databinding.ObservableField<java.lang.String> viewModelCommentAuthor = null;
 
-        if ((dirtyFlags & 0x1fffffL) != 0) {
+        if ((dirtyFlags & 0x1ffffffL) != 0) {
 
 
-            if ((dirtyFlags & 0x180001L) != 0) {
+            if ((dirtyFlags & 0x1800001L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.morningTemp
@@ -483,7 +551,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelMorningTempGet = viewModelMorningTemp.get();
                     }
             }
-            if ((dirtyFlags & 0x180002L) != 0) {
+            if ((dirtyFlags & 0x1800002L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.barName
@@ -497,7 +565,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelBarNameGet = viewModelBarName.get();
                     }
             }
-            if ((dirtyFlags & 0x180004L) != 0) {
+            if ((dirtyFlags & 0x1800004L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.barItem
@@ -511,7 +579,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelBarItemGet = viewModelBarItem.get();
                     }
             }
-            if ((dirtyFlags & 0x180008L) != 0) {
+            if ((dirtyFlags & 0x1800008L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.noon
@@ -525,7 +593,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelNoonGet = viewModelNoon.get();
                     }
             }
-            if ((dirtyFlags & 0x180010L) != 0) {
+            if ((dirtyFlags & 0x1800010L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.selectedDate
@@ -539,7 +607,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelSelectedDateGet = viewModelSelectedDate.get();
                     }
             }
-            if ((dirtyFlags & 0x180020L) != 0) {
+            if ((dirtyFlags & 0x1800020L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.eveningTemp
@@ -553,13 +621,41 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelEveningTempGet = viewModelEveningTemp.get();
                     }
             }
-            if ((dirtyFlags & 0x180040L) != 0) {
+            if ((dirtyFlags & 0x1800040L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.comment
+                        viewModelComment = viewModel.getComment();
+                    }
+                    updateRegistration(6, viewModelComment);
+
+
+                    if (viewModelComment != null) {
+                        // read viewModel.comment.get()
+                        viewModelCommentGet = viewModelComment.get();
+                    }
+            }
+            if ((dirtyFlags & 0x1800080L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.commentCount
+                        viewModelCommentCount = viewModel.getCommentCount();
+                    }
+                    updateRegistration(7, viewModelCommentCount);
+
+
+                    if (viewModelCommentCount != null) {
+                        // read viewModel.commentCount.get()
+                        viewModelCommentCountGet = viewModelCommentCount.get();
+                    }
+            }
+            if ((dirtyFlags & 0x1800100L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.restaurantAddress
                         viewModelRestaurantAddress = viewModel.getRestaurantAddress();
                     }
-                    updateRegistration(6, viewModelRestaurantAddress);
+                    updateRegistration(8, viewModelRestaurantAddress);
 
 
                     if (viewModelRestaurantAddress != null) {
@@ -567,13 +663,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelRestaurantAddressGet = viewModelRestaurantAddress.get();
                     }
             }
-            if ((dirtyFlags & 0x180080L) != 0) {
+            if ((dirtyFlags & 0x1800200L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.restaurantName
                         viewModelRestaurantName = viewModel.getRestaurantName();
                     }
-                    updateRegistration(7, viewModelRestaurantName);
+                    updateRegistration(9, viewModelRestaurantName);
 
 
                     if (viewModelRestaurantName != null) {
@@ -581,13 +677,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelRestaurantNameGet = viewModelRestaurantName.get();
                     }
             }
-            if ((dirtyFlags & 0x180100L) != 0) {
+            if ((dirtyFlags & 0x1800400L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.restaurantTime
                         viewModelRestaurantTime = viewModel.getRestaurantTime();
                     }
-                    updateRegistration(8, viewModelRestaurantTime);
+                    updateRegistration(10, viewModelRestaurantTime);
 
 
                     if (viewModelRestaurantTime != null) {
@@ -595,13 +691,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelRestaurantTimeGet = viewModelRestaurantTime.get();
                     }
             }
-            if ((dirtyFlags & 0x180200L) != 0) {
+            if ((dirtyFlags & 0x1800800L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.restaurantItem
                         viewModelRestaurantItem = viewModel.getRestaurantItem();
                     }
-                    updateRegistration(9, viewModelRestaurantItem);
+                    updateRegistration(11, viewModelRestaurantItem);
 
 
                     if (viewModelRestaurantItem != null) {
@@ -609,13 +705,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelRestaurantItemGet = viewModelRestaurantItem.get();
                     }
             }
-            if ((dirtyFlags & 0x180400L) != 0) {
+            if ((dirtyFlags & 0x1801000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.noonTemp
                         viewModelNoonTemp = viewModel.getNoonTemp();
                     }
-                    updateRegistration(10, viewModelNoonTemp);
+                    updateRegistration(12, viewModelNoonTemp);
 
 
                     if (viewModelNoonTemp != null) {
@@ -623,13 +719,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelNoonTempGet = viewModelNoonTemp.get();
                     }
             }
-            if ((dirtyFlags & 0x180800L) != 0) {
+            if ((dirtyFlags & 0x1802000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.hostName
                         viewModelHostName = viewModel.getHostName();
                     }
-                    updateRegistration(11, viewModelHostName);
+                    updateRegistration(13, viewModelHostName);
 
 
                     if (viewModelHostName != null) {
@@ -637,13 +733,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelHostNameGet = viewModelHostName.get();
                     }
             }
-            if ((dirtyFlags & 0x181000L) != 0) {
+            if ((dirtyFlags & 0x1804000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.morning
                         viewModelMorning = viewModel.getMorning();
                     }
-                    updateRegistration(12, viewModelMorning);
+                    updateRegistration(14, viewModelMorning);
 
 
                     if (viewModelMorning != null) {
@@ -651,13 +747,27 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelMorningGet = viewModelMorning.get();
                     }
             }
-            if ((dirtyFlags & 0x182000L) != 0) {
+            if ((dirtyFlags & 0x1808000L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.commentTime
+                        viewModelCommentTime = viewModel.getCommentTime();
+                    }
+                    updateRegistration(15, viewModelCommentTime);
+
+
+                    if (viewModelCommentTime != null) {
+                        // read viewModel.commentTime.get()
+                        viewModelCommentTimeGet = viewModelCommentTime.get();
+                    }
+            }
+            if ((dirtyFlags & 0x1810000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.afterNoonTemp
                         viewModelAfterNoonTemp = viewModel.getAfterNoonTemp();
                     }
-                    updateRegistration(13, viewModelAfterNoonTemp);
+                    updateRegistration(16, viewModelAfterNoonTemp);
 
 
                     if (viewModelAfterNoonTemp != null) {
@@ -665,13 +775,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelAfterNoonTempGet = viewModelAfterNoonTemp.get();
                     }
             }
-            if ((dirtyFlags & 0x184000L) != 0) {
+            if ((dirtyFlags & 0x1820000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.cityName
                         viewModelCityName = viewModel.getCityName();
                     }
-                    updateRegistration(14, viewModelCityName);
+                    updateRegistration(17, viewModelCityName);
 
 
                     if (viewModelCityName != null) {
@@ -679,13 +789,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelCityNameGet = viewModelCityName.get();
                     }
             }
-            if ((dirtyFlags & 0x188000L) != 0) {
+            if ((dirtyFlags & 0x1840000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.afterNoon
                         viewModelAfterNoon = viewModel.getAfterNoon();
                     }
-                    updateRegistration(15, viewModelAfterNoon);
+                    updateRegistration(18, viewModelAfterNoon);
 
 
                     if (viewModelAfterNoon != null) {
@@ -693,13 +803,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelAfterNoonGet = viewModelAfterNoon.get();
                     }
             }
-            if ((dirtyFlags & 0x190000L) != 0) {
+            if ((dirtyFlags & 0x1880000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.evening
                         viewModelEvening = viewModel.getEvening();
                     }
-                    updateRegistration(16, viewModelEvening);
+                    updateRegistration(19, viewModelEvening);
 
 
                     if (viewModelEvening != null) {
@@ -707,13 +817,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelEveningGet = viewModelEvening.get();
                     }
             }
-            if ((dirtyFlags & 0x1a0000L) != 0) {
+            if ((dirtyFlags & 0x1900000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.barAddress
                         viewModelBarAddress = viewModel.getBarAddress();
                     }
-                    updateRegistration(17, viewModelBarAddress);
+                    updateRegistration(20, viewModelBarAddress);
 
 
                     if (viewModelBarAddress != null) {
@@ -721,13 +831,13 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelBarAddressGet = viewModelBarAddress.get();
                     }
             }
-            if ((dirtyFlags & 0x1c0000L) != 0) {
+            if ((dirtyFlags & 0x1a00000L) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.barTime
                         viewModelBarTime = viewModel.getBarTime();
                     }
-                    updateRegistration(18, viewModelBarTime);
+                    updateRegistration(21, viewModelBarTime);
 
 
                     if (viewModelBarTime != null) {
@@ -735,9 +845,23 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
                         viewModelBarTimeGet = viewModelBarTime.get();
                     }
             }
+            if ((dirtyFlags & 0x1c00000L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.commentAuthor
+                        viewModelCommentAuthor = viewModel.getCommentAuthor();
+                    }
+                    updateRegistration(22, viewModelCommentAuthor);
+
+
+                    if (viewModelCommentAuthor != null) {
+                        // read viewModel.commentAuthor.get()
+                        viewModelCommentAuthorGet = viewModelCommentAuthor.get();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x100000L) != 0) {
+        if ((dirtyFlags & 0x1000000L) != 0) {
             // api target 1
 
             this.accept.setOnClickListener(mCallback1);
@@ -745,99 +869,119 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
             this.decline.setOnClickListener(mCallback2);
             this.declineBottom.setOnClickListener(mCallback4);
         }
-        if ((dirtyFlags & 0x180010L) != 0) {
+        if ((dirtyFlags & 0x1c00000L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.authorName, viewModelCommentAuthorGet);
+        }
+        if ((dirtyFlags & 0x1800010L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewModelSelectedDateGet);
         }
-        if ((dirtyFlags & 0x180020L) != 0) {
+        if ((dirtyFlags & 0x1800020L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewModelEveningTempGet);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView12, viewModelEveningTempGet);
         }
-        if ((dirtyFlags & 0x190000L) != 0) {
+        if ((dirtyFlags & 0x1880000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView11, viewModelEveningGet);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView9, viewModelEveningGet);
         }
-        if ((dirtyFlags & 0x180800L) != 0) {
+        if ((dirtyFlags & 0x1802000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView13, viewModelHostNameGet);
         }
-        if ((dirtyFlags & 0x180002L) != 0) {
+        if ((dirtyFlags & 0x1800002L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView14, viewModelBarNameGet);
         }
-        if ((dirtyFlags & 0x1c0000L) != 0) {
+        if ((dirtyFlags & 0x1a00000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView15, viewModelBarTimeGet);
         }
-        if ((dirtyFlags & 0x180004L) != 0) {
+        if ((dirtyFlags & 0x1800004L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView16, viewModelBarItemGet);
         }
-        if ((dirtyFlags & 0x1a0000L) != 0) {
+        if ((dirtyFlags & 0x1900000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView17, viewModelBarAddressGet);
         }
-        if ((dirtyFlags & 0x184000L) != 0) {
+        if ((dirtyFlags & 0x1820000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewModelCityNameGet);
         }
-        if ((dirtyFlags & 0x180080L) != 0) {
+        if ((dirtyFlags & 0x1800200L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView20, viewModelRestaurantNameGet);
         }
-        if ((dirtyFlags & 0x180100L) != 0) {
+        if ((dirtyFlags & 0x1800400L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView21, viewModelRestaurantTimeGet);
         }
-        if ((dirtyFlags & 0x180200L) != 0) {
+        if ((dirtyFlags & 0x1800800L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView22, viewModelRestaurantItemGet);
         }
-        if ((dirtyFlags & 0x180040L) != 0) {
+        if ((dirtyFlags & 0x1800100L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView23, viewModelRestaurantAddressGet);
         }
-        if ((dirtyFlags & 0x181000L) != 0) {
+        if ((dirtyFlags & 0x1808000L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView27, viewModelCommentTimeGet);
+        }
+        if ((dirtyFlags & 0x1800040L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView28, viewModelCommentGet);
+        }
+        if ((dirtyFlags & 0x1800080L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView29, viewModelCommentCountGet);
+        }
+        if ((dirtyFlags & 0x1804000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewModelMorningGet);
         }
-        if ((dirtyFlags & 0x180001L) != 0) {
+        if ((dirtyFlags & 0x1800001L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewModelMorningTempGet);
         }
-        if ((dirtyFlags & 0x180008L) != 0) {
+        if ((dirtyFlags & 0x1800008L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewModelNoonGet);
         }
-        if ((dirtyFlags & 0x180400L) != 0) {
+        if ((dirtyFlags & 0x1801000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewModelNoonTempGet);
         }
-        if ((dirtyFlags & 0x188000L) != 0) {
+        if ((dirtyFlags & 0x1840000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, viewModelAfterNoonGet);
         }
-        if ((dirtyFlags & 0x182000L) != 0) {
+        if ((dirtyFlags & 0x1810000L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewModelAfterNoonTempGet);
@@ -930,21 +1074,25 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         flag 3 (0x4L): viewModel.noon
         flag 4 (0x5L): viewModel.selectedDate
         flag 5 (0x6L): viewModel.eveningTemp
-        flag 6 (0x7L): viewModel.restaurantAddress
-        flag 7 (0x8L): viewModel.restaurantName
-        flag 8 (0x9L): viewModel.restaurantTime
-        flag 9 (0xaL): viewModel.restaurantItem
-        flag 10 (0xbL): viewModel.noonTemp
-        flag 11 (0xcL): viewModel.hostName
-        flag 12 (0xdL): viewModel.morning
-        flag 13 (0xeL): viewModel.afterNoonTemp
-        flag 14 (0xfL): viewModel.cityName
-        flag 15 (0x10L): viewModel.afterNoon
-        flag 16 (0x11L): viewModel.evening
-        flag 17 (0x12L): viewModel.barAddress
-        flag 18 (0x13L): viewModel.barTime
-        flag 19 (0x14L): viewModel
-        flag 20 (0x15L): null
+        flag 6 (0x7L): viewModel.comment
+        flag 7 (0x8L): viewModel.commentCount
+        flag 8 (0x9L): viewModel.restaurantAddress
+        flag 9 (0xaL): viewModel.restaurantName
+        flag 10 (0xbL): viewModel.restaurantTime
+        flag 11 (0xcL): viewModel.restaurantItem
+        flag 12 (0xdL): viewModel.noonTemp
+        flag 13 (0xeL): viewModel.hostName
+        flag 14 (0xfL): viewModel.morning
+        flag 15 (0x10L): viewModel.commentTime
+        flag 16 (0x11L): viewModel.afterNoonTemp
+        flag 17 (0x12L): viewModel.cityName
+        flag 18 (0x13L): viewModel.afterNoon
+        flag 19 (0x14L): viewModel.evening
+        flag 20 (0x15L): viewModel.barAddress
+        flag 21 (0x16L): viewModel.barTime
+        flag 22 (0x17L): viewModel.commentAuthor
+        flag 23 (0x18L): viewModel
+        flag 24 (0x19L): null
     flag mapping end*/
     //end
 }

@@ -20,12 +20,14 @@ class MainViewModel : ViewModel() {
     val barTime = ObservableField<String>("6:00 PM")
     val barItem = ObservableField<String>("Cocktail")
     val barAddress = ObservableField<String>("20 Queensberry \nSWT 2DR")
-
-
     val restaurantName = ObservableField<String>("Thai Square")
     val restaurantTime = ObservableField<String>("8:00 PM")
     val restaurantItem = ObservableField<String>("Thai")
     val restaurantAddress = ObservableField<String>("113 Perry Street \nEC1R 3BX")
+    val commentAuthor = ObservableField<String>("Monkee")
+    val commentTime = ObservableField<String>("5 Mins")
+    val comment = ObservableField<String>("Kate, Listen, I know im greatbut  im just a virtual friend may be you should invite some real ones?")
+    val commentCount = ObservableField<String>("6 Comments")
     var buttonClicked = MutableLiveData<String>()
 
     fun acceptedClick(type: String) {

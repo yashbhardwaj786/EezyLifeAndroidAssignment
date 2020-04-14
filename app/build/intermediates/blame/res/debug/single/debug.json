@@ -20,6 +20,10 @@
         "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/drawable/ic_rain_grey.xml"
     },
     {
+        "merged": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/res/merged/debug/drawable_bg_round_three_corner.xml.flat",
+        "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/drawable/bg_round_three_corner.xml"
+    },
+    {
         "merged": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/build/intermediates/res/merged/debug/drawable_ic_minus.xml.flat",
         "source": "/Users/zolo13/Desktop/EezyLifeAndroidAssignment/app/src/main/res/drawable/ic_minus.xml"
     },

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -30,6 +31,9 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
 
   @NonNull
   public final LinearLayout acceptedBottom;
+
+  @NonNull
+  public final AppCompatTextView authorName;
 
   @NonNull
   public final LinearLayout clCenter;
@@ -71,6 +75,9 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   public final LinearLayout root;
 
   @NonNull
+  public final TicketView ticketViewBottom;
+
+  @NonNull
   public final TicketView topTicket;
 
   @Bindable
@@ -78,16 +85,18 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
       LinearLayout accept, LinearLayout acceptBottom, LinearLayout accepted,
-      LinearLayout acceptedBottom, LinearLayout clCenter, LinearLayout clCenter1,
-      LinearLayout clHead, LinearLayout clHead1, LinearLayout decline, LinearLayout declineBottom,
-      LinearLayout declined, LinearLayout declinedBottom, HorizontalCalendarView horizontal,
-      CircleImageView photo1, CircleImageView photo2, CircleImageView photo3, LinearLayout root,
+      LinearLayout acceptedBottom, AppCompatTextView authorName, LinearLayout clCenter,
+      LinearLayout clCenter1, LinearLayout clHead, LinearLayout clHead1, LinearLayout decline,
+      LinearLayout declineBottom, LinearLayout declined, LinearLayout declinedBottom,
+      HorizontalCalendarView horizontal, CircleImageView photo1, CircleImageView photo2,
+      CircleImageView photo3, LinearLayout root, TicketView ticketViewBottom,
       TicketView topTicket) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accept = accept;
     this.acceptBottom = acceptBottom;
     this.accepted = accepted;
     this.acceptedBottom = acceptedBottom;
+    this.authorName = authorName;
     this.clCenter = clCenter;
     this.clCenter1 = clCenter1;
     this.clHead = clHead;
@@ -101,6 +110,7 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
     this.photo2 = photo2;
     this.photo3 = photo3;
     this.root = root;
+    this.ticketViewBottom = ticketViewBottom;
     this.topTicket = topTicket;
   }
 
