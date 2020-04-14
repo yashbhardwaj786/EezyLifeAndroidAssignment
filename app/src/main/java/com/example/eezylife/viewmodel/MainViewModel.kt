@@ -16,7 +16,7 @@ class MainViewModel : ViewModel() {
     val evening = ObservableField<String>("Evening")
     val eveningTemp = ObservableField<String>("16°C")
     val night = ObservableField<String>("Night")
-    val nightTemp = ObservableField<String>("12°C")
+    val nightTemp = ObservableField<String>("19°C")
     val hostName = ObservableField<String>("Nicolas is the host:")
     val barName = ObservableField<String>("Piano Works")
     val barTime = ObservableField<String>("6:00 PM")
