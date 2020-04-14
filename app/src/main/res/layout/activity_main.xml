@@ -64,8 +64,6 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1px"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
                         android:background="@color/grey_92" />
 
                     <LinearLayout
@@ -78,10 +76,11 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
-                            android:gravity="center"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="start"
+                            android:layout_marginStart="20dp"
                             android:text="@{viewModel.selectedDate}"
-                            android:textColor="#000000"
+                            android:textColor="#536A8A"
                             android:textSize="16sp"
                             tools:text="Mon 13, Apr 2020" />
 
@@ -96,7 +95,7 @@
                             android:paddingEnd="20dp"
                             android:paddingBottom="10dp"
                             android:text="@{viewModel.cityName}"
-                            android:textColor="#000000"
+                            android:textColor="#536A8A"
                             android:textSize="16sp"
                             tools:text="London, UK" />
 
@@ -158,9 +157,9 @@
                 <include
                     layout="@layout/layout_morning_slot"
                     android:visibility="@{viewModel.morningSlotVisible ? View.VISIBLE: View.GONE}"
-                    bind:viewModel="@{viewModel}"
                     bind:slotName="@{viewModel.morning}"
-                    bind:slotTemp="@{viewModel.morningTemp}"/>
+                    bind:slotTemp="@{viewModel.morningTemp}"
+                    bind:viewModel="@{viewModel}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -170,9 +169,9 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
-                    android:visibility="@{viewModel.noonSlotVisible ? View.GONE: View.VISIBLE}"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:visibility="@{viewModel.noonSlotVisible ? View.GONE: View.VISIBLE}">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -216,9 +215,9 @@
                 <include
                     layout="@layout/layout_morning_slot"
                     android:visibility="@{viewModel.noonSlotVisible ? View.VISIBLE: View.GONE}"
-                    bind:viewModel="@{viewModel}"
                     bind:slotName="@{viewModel.noon}"
-                    bind:slotTemp="@{viewModel.noonTemp}"/>
+                    bind:slotTemp="@{viewModel.noonTemp}"
+                    bind:viewModel="@{viewModel}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -228,9 +227,9 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
-                    android:visibility="@{viewModel.afterNoonSlotVisible ? View.GONE: View.VISIBLE}"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:visibility="@{viewModel.afterNoonSlotVisible ? View.GONE: View.VISIBLE}">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -274,9 +273,9 @@
                 <include
                     layout="@layout/layout_morning_slot"
                     android:visibility="@{viewModel.afterNoonSlotVisible ? View.VISIBLE: View.GONE}"
-                    bind:viewModel="@{viewModel}"
                     bind:slotName="@{viewModel.afterNoon}"
-                    bind:slotTemp="@{viewModel.afterNoonTemp}"/>
+                    bind:slotTemp="@{viewModel.afterNoonTemp}"
+                    bind:viewModel="@{viewModel}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -337,8 +336,8 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center_vertical"
-                    android:visibility="@{viewModel.eveningSlotVisible ? View.VISIBLE: View.GONE}"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="@{viewModel.eveningSlotVisible ? View.VISIBLE: View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -425,15 +424,23 @@
                                     app:civ_border_color="#FF000000"
                                     app:civ_border_width="2dp" />
 
-                                <androidx.appcompat.widget.AppCompatTextView
+                                <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:fontFamily="@font/roboto_medium"
-                                    android:text="@{viewModel.hostName}"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    tools:text="Nicolas is the host:" />
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@drawable/ic_settings"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="@{viewModel.hostName}"
+                                        android:textColor="#536A8A"
+                                        android:drawablePadding="10dp"
+                                        android:textSize="12sp"
+                                        tools:text="Nicolas is the host" />
+
+                                </LinearLayout>
 
                                 <RelativeLayout
                                     android:layout_width="0dp"
@@ -519,9 +526,9 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
-                                        android:fontFamily="@font/roboto_medium"
+                                        android:fontFamily="@font/roboto_black"
                                         android:text="@{viewModel.barName}"
-                                        android:textColor="@color/black"
+                                        android:textColor="#536A8A"
                                         android:textSize="16sp"
                                         tools:text="Piano Works" />
 
@@ -544,7 +551,7 @@
 
                                 <LinearLayout
                                     android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_weight="1"
                                     android:orientation="vertical">
 
@@ -555,7 +562,7 @@
                                         android:fontFamily="@font/roboto_medium"
                                         android:gravity="end"
                                         android:text="@{viewModel.barTime}"
-                                        android:textColor="@color/black"
+                                        android:textColor="@color/grey_92"
                                         android:textSize="16sp"
                                         tools:text="6:00 PM" />
 
@@ -601,7 +608,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/accept"
                                             android:textColor="@color/white"
                                             android:textSize="15sp" />
@@ -622,7 +629,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/decline"
                                             android:textColor="@color/black"
                                             android:textSize="15sp" />
@@ -645,7 +652,7 @@
                                             android:layout_gravity="center"
                                             android:drawableStart="@drawable/ic_checkmark_blue"
                                             android:drawablePadding="10dp"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/accepted"
                                             android:textColor="@color/green_57"
                                             android:textSize="15sp" />
@@ -668,7 +675,7 @@
                                             android:layout_gravity="center"
                                             android:drawableStart="@drawable/ic_close_black_24dp"
                                             android:drawablePadding="10dp"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/declined"
                                             android:textColor="@color/red"
                                             android:textSize="15sp" />
@@ -717,9 +724,9 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
-                                        android:fontFamily="@font/roboto_medium"
+                                        android:fontFamily="@font/roboto_black"
                                         android:text="@{viewModel.restaurantName}"
-                                        android:textColor="@color/black"
+                                        android:textColor="#536A8A"
                                         android:textSize="16sp"
                                         tools:text="Thai Square" />
 
@@ -742,7 +749,7 @@
 
                                 <LinearLayout
                                     android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_weight="1"
                                     android:orientation="vertical">
 
@@ -753,7 +760,7 @@
                                         android:fontFamily="@font/roboto_medium"
                                         android:gravity="end"
                                         android:text="@{viewModel.restaurantTime}"
-                                        android:textColor="@color/black"
+                                        android:textColor="@color/grey_92"
                                         android:textSize="16sp"
                                         tools:text="8:00 PM" />
 
@@ -762,7 +769,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
                                         android:layout_margin="5dp"
-                                        android:drawableStart="@drawable/ic_cocktail"
+                                        android:drawableStart="@drawable/ic_restaurant"
                                         android:drawablePadding="16dp"
                                         android:fontFamily="@font/roboto_light"
                                         android:text="@{viewModel.restaurantItem}"
@@ -799,7 +806,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/accept"
                                             android:textColor="@color/white"
                                             android:textSize="15sp" />
@@ -820,7 +827,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/decline"
                                             android:textColor="@color/black"
                                             android:textSize="15sp" />
@@ -843,7 +850,7 @@
                                             android:layout_gravity="center"
                                             android:drawableStart="@drawable/ic_checkmark_blue"
                                             android:drawablePadding="10dp"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/accepted"
                                             android:textColor="@color/green_57"
                                             android:textSize="15sp" />
@@ -866,7 +873,7 @@
                                             android:layout_gravity="center"
                                             android:drawableStart="@drawable/ic_close_black_24dp"
                                             android:drawablePadding="10dp"
-                                            android:fontFamily="@font/roboto_medium"
+                                            android:fontFamily="@font/roboto_light"
                                             android:text="@string/declined"
                                             android:textColor="@color/red"
                                             android:textSize="15sp" />
@@ -926,7 +933,7 @@
                                             android:layout_gravity="center_vertical"
                                             android:fontFamily="@font/roboto_light"
                                             android:text="@{viewModel.commentTime}"
-                                            android:textColor="@color/black"
+                                            android:textColor="@color/grey_92"
                                             android:textSize="12sp"
                                             tools:text="5 Mins" />
 
@@ -961,7 +968,7 @@
                                     android:drawablePadding="10dp"
                                     android:fontFamily="@font/roboto_light"
                                     android:text="@{viewModel.commentCount}"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/grey_92"
                                     android:textSize="12sp"
                                     tools:text="6 Comments" />
 
@@ -986,7 +993,7 @@
                                         android:layout_margin="10dp"
                                         android:layout_weight="1"
                                         android:background="@drawable/bg_rounded_left_top_white"
-                                        android:hint="Write your thoughts"
+                                        android:hint="Write your thoughts..."
                                         android:padding="10dp"
                                         android:textColor="@color/black"
                                         android:textSize="14sp" />
@@ -1010,9 +1017,9 @@
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/bg_rounded_left_top_white"
                     android:gravity="center_vertical"
-                    android:visibility="@{viewModel.nightSlotVisible ? View.GONE: View.VISIBLE}"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:visibility="@{viewModel.nightSlotVisible ? View.GONE: View.VISIBLE}">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -1056,9 +1063,9 @@
                 <include
                     layout="@layout/layout_night_slot"
                     android:visibility="@{viewModel.nightSlotVisible ? View.VISIBLE: View.GONE}"
-                    bind:viewModel="@{viewModel}"
                     bind:slotName="@{viewModel.night}"
-                    bind:slotTemp="@{viewModel.nightTemp}"/>
+                    bind:slotTemp="@{viewModel.nightTemp}"
+                    bind:viewModel="@{viewModel}" />
 
             </LinearLayout>
 
